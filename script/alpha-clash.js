@@ -11,8 +11,18 @@
 //   // console.log(playgroundScreen.classList);
 // }
 
+function continueGame() {
+  // Generate a random alphabet
+  const getAlphabet = getARandomAlphabet();
+  console.log(getAlphabet);
+  // set the randomly generated alphabet to the screen
+  const currentAlphabet = document.getElementById("current-alphabet");
+  currentAlphabet.innerText = getAlphabet;
+  // Set background Color
+  setBackgroundColor(getAlphabet);
+}
 function play() {
   hideElementById("home-screen");
-
   showElementById("play-ground");
+  continueGame();
 }
