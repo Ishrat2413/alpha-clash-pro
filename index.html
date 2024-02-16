@@ -72,27 +72,30 @@
                 <!-- Keyboard End-->
                 <!-- Buttons -->
                 <div class="flex w-2/4 justify-between">
-                    <button class="btn rounded-full bg-[#894189] text-white px-4 border-none">
+                    <!-- Display Life -->
+                    <button class="btn rounded-full bg-[#894189] text-white px-4 border-none hover:text-black hover:bg-purple-300">
                         Life
                         <img src="images/Group 23.png" alt="">
-                        <span>1</span>
+                        <span id="current-life">5</span>
                     </button>
-                    <button class="btn rounded-full bg-[#360490] text-white px-4 border-none">
+                    <!-- Display Score -->
+                    <button class="btn rounded-full bg-[#360490] text-white px-4 border-none hover:text-black hover:bg-blue-300">
                         Score
                         <img src="images/monetization_on.png" alt="">
-                        <span>1</span>
+                        <span id="current-score">0</span>
                     </button>
                 </div>
             </div>
         </section>
         <!-- Score Board -->
-        <section class="score flex justify-center min-h-screen items-center hidden">
+        <section id="score" class="flex justify-center min-h-screen items-center hidden">
             <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-6 rounded-lg">
+                <p class="text-3xl font-extrabold text-yellow-500 bg-[#00000099] rounded-md p-2">Game Over!</p>
                 <h1 class="text-8xl">
                     <span class="font-extrabold">Score: </span>
-                    <span>14</span>
+                    <span id="last-score">14</span>
                 </h1>
-                <button class="btn">Play Again</button>
+                <button onclick="play()" class="btn">Play Again</button>
                 <p>Practice will make you Pro!</p>
             </div>
         </section>
